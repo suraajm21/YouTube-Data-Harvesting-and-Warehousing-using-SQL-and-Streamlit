@@ -7,10 +7,10 @@ This project aims to develop a user-friendly Streamlit application that utilizes
 Size: 10 rows in the Channel table.
 
 2. Videos:
-Size: ~200 rows in the Video table.
+Size: 443 rows in the Video table.
 
 3. Comments:
-Size: ~10,000 rows in the Comment table.
+Size: 7752 rows in the Comment table.
 ```
 2. Technologies Used
 ```
