@@ -12,7 +12,7 @@ import json
 
 # Function to establish a connection to the YouTube Data API
 def api_connection():
-    api_key = "AIzaSyAz4NXgN_D9fOkmcy1LAS5aQ1LP7zMQLgU"
+    api_key = "Insert API Key"
     api_service_name = "youtube"
     api_version = "v3"
 
