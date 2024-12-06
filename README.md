@@ -3,7 +3,9 @@ This project aims to develop a user-friendly Streamlit application that utilizes
 
 Workflow
 1. Project Setup.
+   
 Environment Setup:
-* Install necessary Python packages
-* Set up a MySQL database
+
+   * Install necessary Python packages
+   * Set up a MySQL database
 
