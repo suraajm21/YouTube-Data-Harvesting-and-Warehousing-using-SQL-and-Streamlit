@@ -11,15 +11,16 @@ Size: ~200 rows in the Video table.
 
 3. Comments:
 Size: ~10,000 rows in the Comment table.
-
+```
 2. Technologies Used
+```
 1. Programming Language:
 Python: Main language for development.
-```
+
 2. Database:
 MySQL: Used for storing data in structured tables (Channel, Video, Comment).
 
-3. Frontend Framework:
+4. Frontend Framework:
 Streamlit: Interactive user interface for:
 * Collecting Channel IDs.
 * Displaying data.
@@ -36,8 +37,10 @@ YouTube Data API v3: To fetch channel, video, and comment data.
 
 6. Other Tools:
 Regular Expressions (re): Parsing duration and time formats from API responses.
+```
 
 3. Methodologies Used
+```
 1. Data Harvesting:
 Method: Fetching data directly from the YouTube Data API v3 for the channels, videos, and comments.
 
@@ -63,8 +66,9 @@ SQL joins are used to link tables (e.g., Channel ↔ Video, Video ↔ Comment).
 * Method:
    * Display data tables directly using Streamlit (st.dataframe).
    * Provide user-friendly interfaces to explore and analyze data interactively.
-
+```
 4. Workflow for Completing the Project
+```
 1.Requirement Analysis:
 * Define the scope: Collect data from YouTube, store it in a database, and perform specific analyses.
 * Identify tools and APIs required (YouTube API, MySQL, Streamlit).
@@ -93,5 +97,5 @@ Write queries to answer analytical questions.
   
 5. Deployment:
 Host the Streamlit app
-
+```
 
