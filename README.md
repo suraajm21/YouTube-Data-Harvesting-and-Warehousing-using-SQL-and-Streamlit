@@ -69,34 +69,95 @@ SQL joins are used to link tables (e.g., Channel ↔ Video, Video ↔ Comment).
 ```
 4. Workflow for Completing the Project
 ```
-1.Requirement Analysis:
-* Define the scope: Collect data from YouTube, store it in a database, and perform specific analyses.
-* Identify tools and APIs required (YouTube API, MySQL, Streamlit).
+1. Project Setup
+1. Environment Setup:
+* Install necessary Python packages:
+* Set up a MySQL database (e.g., youtube_data) locally or on a server.
 
-2. Setup and Configuration:
-* Create the MySQL database and tables.
-* Set up a Python environment with required libraries.
-* Obtain YouTube API credentials.
+2. Define Database Schema:
+Tables:
+* Channel: Stores channel details.
+* Video: Stores video details.
+* Comment: Stores comment details.
 
-3. Development:
-* Backend:
-    * Write Python functions to fetch data from the API.
-    * Process and clean the data.
-    * Store data into MySQL.
-      
-* Frontend:
-Build a Streamlit UI for user input and data visualization.
+2. Data Collection
+1. Fetch Data from YouTube API:
+Use YouTube Data API v3 to collect:
+* Channel details
+* Video details
+* Comment details
 
-* SQL Queries:
-Write queries to answer analytical questions.
+2. Functions to Retrieve Data:
+* get_channel_details(channel_ids): Fetches channel details.
+* get_video_details(channel_ids): Fetches video details for given channel IDs.
+* get_comment_details(video_id): Fetches comments for a specific video.
 
-4. Testing:
-* Validate API responses and data insertion.
-* Test SQL queries for accuracy.
-* Ensure the Streamlit app works as expected.
-  
-5. Deployment:
-Host the Streamlit app
+3. Database Operations
+
+1. Database Connection Setup:
+* Use mysql.connector to connect to MySQL.
+* Functions:
+    * create_database_if_not_exists(database_name): Creates the database if it doesn't exist.
+    * channel_table(): Creates and populates the Channel table.
+    * video_table(): Creates and populates the Video table.
+    * comment_table(): Creates and populates the Comment table.
+
+2. Insert Data into Tables:
+Insert or update data using:
+INSERT INTO ... ON DUPLICATE KEY UPDATE for channel, video, and comment data.
+
+4. Streamlit User Interface
+
+1. App Layout:
+* Title: st.title("YouTube Data Harvesting and Warehousing using SQL and Streamlit")
+* Textbox: st.text_input("Enter the Channel_ID") for user input.
+
+2. Data Collection Button:
+* Button: st.button("Collect and Store Data")
+* Actions:
+     * Check if channel data already exists in the database.
+     * Fetch data for the channel, its videos, and comments.
+     * Populate tables in the database.
+
+5. Data Display
+
+1. Interactive Table Selection:
+* Radio Button: st.radio("Select the Table to Display", ("Channels_Data", "Video_Information", "Comment_Information"))
+* Functions to display data:
+      * show_channel(): Displays channel data.
+      * show_video(): Displays video data.
+      * show_comment(): Displays comment data.
+
+2. Dynamic Queries:
+Use SQL queries to answer specific questions, such as:
+      * Most viewed videos
+      * Channels with the most videos
+      * Average video duration per channel
+
+6. Question-Answering Interface
+1. Select Questions:
+Dropdown: st.selectbox("Choose the question", [list of questions])
+2. Dynamic Query Execution:
+Display the result in a DataFrame using st.write().
+
+7. Full Streamlit App Workflow
+1. Input Data (Channel ID):
+User enters a Channel ID to collect data.
+
+2.Fetch and Store Data:
+* Fetch channel, video, and comment data.
+* Store data in respective MySQL tables.
+
+3. Data Exploration:
+Display raw data from tables based on user selection.
+
+4. Answer Specific Questions:
+Perform SQL queries based on user-selected questions and display results.
+
+8. Testing and Deployment
+Local Testing:
+Run the Streamlit app locally:
+streamlit run app.py
 ```
 
 5. User Flow
