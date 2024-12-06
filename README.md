@@ -2,7 +2,7 @@
 This project aims to develop a user-friendly Streamlit application that utilizes the Google API to extract information on a YouTube channel, stores it in a SQL database, and enables users to search for channel details and join tables to view data in the Streamlit app.
 
 1. Data Volume
-'''
+```
 1. Channels:
 Size: 10 rows in the Channel table.
 
@@ -15,7 +15,7 @@ Size: ~10,000 rows in the Comment table.
 2. Technologies Used
 1. Programming Language:
 Python: Main language for development.
-'''
+```
 2. Database:
 MySQL: Used for storing data in structured tables (Channel, Video, Comment).
 
