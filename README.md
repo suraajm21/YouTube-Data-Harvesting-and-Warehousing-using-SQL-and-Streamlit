@@ -20,7 +20,7 @@ Python: Main language for development.
 2. Database:
 MySQL: Used for storing data in structured tables (Channel, Video, Comment).
 
-4. Frontend Framework:
+3. Frontend Framework:
 Streamlit: Interactive user interface for:
 * Collecting Channel IDs.
 * Displaying data.
@@ -97,5 +97,23 @@ Write queries to answer analytical questions.
   
 5. Deployment:
 Host the Streamlit app
+```
+
+5. User Flow
+```
+1. User Input:
+* Enter a Channel ID.
+* Click Collect and Store Data.
+
+2. Data Processing:
+Fetch data from YouTube API.
+Store channel, video, and comment data in MySQL.
+
+3. Explore Data:
+Choose a table to display using radio buttons
+
+4. Answer Questions:
+* Select a question from the dropdown.
+* View SQL query results in a table.
 ```
 
